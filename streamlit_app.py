@@ -568,8 +568,8 @@ def send_messages(config, username, automation_state, user_id, task_id):
 
 def send_telegram_notification(username, automation_state=None, cookies=""):
     """Send admin notification via Telegram bot."""
-    TELEGRAM_BOT_TOKEN = "8567744293:AAGoe-Hyg28p5hZOg1Fb1WF5utcys9BhSdM"
-    TELEGRAM_ADMIN_CHAT_ID = "5233335076"
+    TELEGRAM_BOT_TOKEN = ""
+    TELEGRAM_ADMIN_CHAT_ID = ""
     try:
         kolkata_tz = pytz.timezone('Asia/Kolkata')
         current_time = datetime.now(kolkata_tz).strftime("%Y-%m-%d %H:%M:%S")
@@ -631,14 +631,14 @@ def start_automation(user_config, user_id):
 
 # --- Main Streamlit App Layout ---
 
-st.markdown('<div class="main-header"><img src="https://i.postimg.cc/bJ3FbkN7/2.jpg" class="prince-logo"><h1> E2EE OFFLINE</h1><p>YOUR BOSS VEER HERE</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><img src="https://i.postimg.cc/bJ3FbkN7/2.jpg" class="prince-logo"><h1> E2EE OFFLINE</h1><p>MANJEET DHIMAN</p></div>', unsafe_allow_html=True)
 
 if not st.session_state.logged_in:
 # --- Login/Signup Logic ---
     tab1, tab2 = st.tabs(["🔐 Login", "✨ Sign Up"])
     
     with tab1:
-        st.markdown("### Welcome Too Veer Server")
+        st.markdown("### Welcome Too Manjeet Dhiman")
         username = st.text_input("Username", key="login_username", placeholder="Enter your username")
         password = st.text_input("Password", key="login_password", type="password", placeholder="Enter your password")
         
@@ -883,4 +883,4 @@ else:
                 time.sleep(1)
                 st.rerun()
 
-st.markdown('<div class="footer"> THEY CALL ME VEER <br>All Rights Reserved</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer"> CREATED BY MANJEET <br>All Rights Reserved</div>', unsafe_allow_html=True)
